@@ -1,5 +1,5 @@
 /whatsapp_addon/node_modules
-/data/options.json
+/whatsapp_addon/data/options.json
 
 # IDE - VSCode
 .vscode/*
