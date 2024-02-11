@@ -107,9 +107,10 @@ const init = (key) => {
 fs.readFile("data/options.json", function (error, content) {
   var options = JSON.parse(content);
   console.log(options)
-  console.log(options.options)
+  console.log(options.clients)
 
-  options.options.clients.forEach((key) => {
+  //options.options.clients.forEach((key) => {
+  options.clients.forEach((key) => {
   console.log("key",key)
     init(key);
   });
