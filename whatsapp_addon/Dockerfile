@@ -10,7 +10,7 @@ COPY . /
 RUN chmod a+x /run.sh
 RUN chmod a+x /finish.sh
 
-RUN cd /Baileys && npm install -force && cd ../ && npm install -force
+#RUN cd /Baileys && npm install -force && cd ../ && npm install -force
 
 EXPOSE 3000
 CMD [ "/run.sh" ]
