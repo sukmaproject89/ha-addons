@@ -74,6 +74,8 @@ const onMsg = (msg, key) => {
 }
 
 const onPresenceUpdate = (presence, key) => {
+  logger.info(key, " onPresenceUpdate");
+  logger.info(presence, " onPresenceUpdate");
   axios.post(
     "http://supervisor/core/api/events/whatsapp_presence_update",
     { clientId: key, ...presence },
@@ -94,6 +96,7 @@ const onLogout = async (key) => {
 }
 
 const init = (key) => {
+  logger.info(`${key} init run.`)
   clients[key] = new WhatsappClient({ path: `/data/${key}.json` });
 
   clients[key].on('restart', () => logger.debug(`${key} client restarting...`))
