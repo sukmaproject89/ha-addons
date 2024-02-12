@@ -3,6 +3,7 @@ const EventEmitter = require("eventemitter2");
 const makeWASocket = require("./Baileys").default;
 const {
     DisconnectReason,
+    Browsers,
     useMultiFileAuthState
 } = require("./Baileys");
 
@@ -54,7 +55,7 @@ class WhatsappClient extends EventEmitter {
             auth: state,
             syncFullHistory: false,
             markOnlineOnConnect: !this.#offline,
-            browser: ['Ubuntu', 'Desktop', '20.0.04'],
+            browser: Browsers.macOS('Desktop'),
             logger: require("pino")({ level: "silent" }),
             defaultQueryTimeoutMs: undefined,
             patchMessageBeforeSending: (message) => {
