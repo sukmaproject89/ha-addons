@@ -3,7 +3,7 @@
 
 _Write your Whatsapp message from Home Assistant_
 
-<img src="https://github.com/giuseppecastaldo/ha-addons/blob/main/whatsapp_addon/logo.png?raw=true" width="400"/>
+<img src="https://raw.githubusercontent.com/sukmaproject89/ha-addons/main/whatsapp_addon/logo.png" width="400"/>
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
