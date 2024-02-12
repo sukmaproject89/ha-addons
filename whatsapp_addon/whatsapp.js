@@ -56,7 +56,7 @@ class WhatsappClient extends EventEmitter {
             syncFullHistory: false,
             markOnlineOnConnect: !this.#offline,
             browser: Browsers.macOS('Desktop'),
-            logger: require("pino")({ level: "silent" }),
+            logger: require("pino")({ level: "debug" }),
             defaultQueryTimeoutMs: undefined,
             patchMessageBeforeSending: (message) => {
                 const requiresPatch = !!(
