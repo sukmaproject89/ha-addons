@@ -86,7 +86,7 @@ class WhatsappClient extends EventEmitter {
             if (state.me) {
                 this.emit("pair", { phone: state.me.id.split(':')[0], name: state.me.name });
             }
-
+            console.log("state",state);
             saveState(state);
         })
 
@@ -126,12 +126,14 @@ class WhatsappClient extends EventEmitter {
     }
 
     #onConnectionUpdate = (event) => {
+        console.log("event",event);
         if (event.qr) this.#onQr(event.qr)
         if (event.connection === 'open') this.#onConnected(event)
         else if (event.connection === 'close') this.#onDisconnected(event)
     }
 
     #onQr = (qr) => {
+        console.log("qr",qr);
         this.emit('qr', qr)
     }
 
