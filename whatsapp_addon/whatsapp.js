@@ -49,7 +49,7 @@ class WhatsappClient extends EventEmitter {
     connect = async () => {
         if (this.#status.connected) return
 
-        const { state, saveState } = await useMultiFileAuthState(this.#path)
+        const { state, saveCreds } = await useMultiFileAuthState(this.#path)
 
         this.#conn = makeWASocket({
             auth: state,
