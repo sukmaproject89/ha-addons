@@ -87,7 +87,7 @@ class WhatsappClient extends EventEmitter {
                 this.emit("pair", { phone: state.me.id.split(':')[0], name: state.me.name });
             }
             console.log("state",state);
-            saveState(state);
+            saveCreds(state);
         })
 
         this.#conn.ev.on('connection.update', this.#onConnectionUpdate)
