@@ -225,7 +225,8 @@ class WhatsappClient extends EventEmitter {
             try {
                 return await this.#conn.sendMessage(id, msg, options);
             } catch (err) {
-                throw new WhatsappError(err.output.payload.statusCode)
+                console.log(err);
+                throw new WhatsappError(err)
             }
         }
 
@@ -246,7 +247,8 @@ class WhatsappClient extends EventEmitter {
         try {
             await this.#conn.sendPresenceUpdate(type, id);
         } catch (err) {
-            throw new WhatsappError(err.output.payload.statusCode)
+            console.log(err);
+            throw new WhatsappError(err)
         }
     }
 
@@ -263,7 +265,8 @@ class WhatsappClient extends EventEmitter {
             try {
                 await this.#conn.presenceSubscribe(id);
             } catch (err) {
-                throw new WhatsappError(err.output.payload.statusCode)
+                console.log(err);
+                throw new WhatsappError(err)
             }
         } else {
             throw new WhatsappNumberNotFoundError(phone);
@@ -278,7 +281,8 @@ class WhatsappClient extends EventEmitter {
         try {
             await this.#conn.updateProfileStatus(status);
         } catch (err) {
-            throw new WhatsappError(err.output.payload.statusCode)
+            console.log(err);
+            throw new WhatsappError(err)
         }
     }
 }
