@@ -11,7 +11,7 @@ RUN chmod a+x /run.sh
 RUN chmod a+x /finish.sh
 
 #RUN cd /Baileys && npm install -force && cd ../ && npm install -force
-RUN npm install express --save
+#RUN npm install express --save
 RUN cd /Baileys
 RUN npm i -f
 RUN cd ../
