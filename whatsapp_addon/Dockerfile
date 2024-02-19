@@ -16,7 +16,6 @@ RUN cd /Baileys
 RUN npm i -f
 RUN cd ../
 RUN npm i -f
-RUN npm i -f
 
 EXPOSE 3000
 CMD [ "/run.sh" ]
